@@ -114,7 +114,7 @@ jobs:
         fi
   
     - name: Setup KernelSU
-      if: env.ENABLE_KERNELSU == 'true'
+      #if: env.ENABLE_KERNELSU == 'true'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s ${{ env.KERNELSU_TAG }}
